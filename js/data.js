@@ -7,6 +7,7 @@ BUNGALOW_DATA = {
     },
     "bay-area": {
         "slugs": [
+            "beautiful-sherwood-forest-townhome-with",
             "prime-palo-alto-home-just-off-el-camino",
             "fantastic-room-in-lovely-menlo-park",
             "huge-home-near-facebook-hq",
@@ -1963,6 +1964,55 @@ BUNGALOW_DATA = {
                 "longitude": -122.223
             },
             "tour": "https://my.matterport.com/show/?m=aQJkraE1zp7&brand=0"
+        },
+        "beautiful-sherwood-forest-townhome-with": {
+            "title": "Beautiful Sherwood Forest townhome with stunning views",
+            "currentResidents": [
+                {
+                    "name": "Miles S.",
+                    "room": "Master - 1",
+                    "room_id": 3433,
+                    "room_size": 198,
+                    "move_in": "2019-11-29"
+                },
+                {
+                    "name": "Diego A.",
+                    "room": "Master - 2",
+                    "room_id": 3434,
+                    "room_size": 187,
+                    "move_in": "2019-11-01"
+                },
+                {
+                    "name": "Arik S.",
+                    "room": "Master - 3",
+                    "room_id": 3435,
+                    "room_size": 159,
+                    "move_in": "2019-11-01"
+                },
+                {
+                    "name": "Zachary C.",
+                    "room": "Bedroom 4",
+                    "room_id": 3436,
+                    "room_size": 152,
+                    "move_in": "2020-01-17"
+                },
+                {
+                    "name": "Evelyn H.",
+                    "room": "Bedroom 5",
+                    "room_id": 3437,
+                    "room_size": 147,
+                    "move_in": "2019-10-25"
+                }
+            ],
+            "futureResidents": [],
+            "departingResidents": [],
+            "address": {
+                "city": "San Francisco",
+                "neighborhood": "",
+                "latitude": 37.736,
+                "longitude": -122.457
+            },
+            "tour": "https://my.matterport.com/show/?m=QE5ubdsWYcK"
         }
     },
     "boston": {
