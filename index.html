@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        div.popup_infobox {
+            color: #555555;
+        }
+
+        span.title {
+            font-weight: bold;
+            font-size: 11pt;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        span.heading {
+            margin-top: 1px;
+            font-weight: bold;
+            display: block;
+            text-transform: uppercase;
+            padding-top: 6px;
+        }
+
+        span.resident {
+            display: block;
+            padding-top: 3px;
+        }
+
+        span.resident > span.name {
+            font-weight: bold;
+            padding-right: 10px;
+        }
+
+        span.resident.leaving > span.name, span.resident.arriving > span.name {
+            color: #777777;
+        }
+    </style>
+    <script src="./js/data.js"></script>
+    <script>
+
+        // This example adds a red rectangle to a map.
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: {lat: 41.850033, lng: -87.6500523},
+                mapTypeId: 'terrain'
+            });
+
+            layoutBungalows(map);
+        }
+
+        function formatPopup(slug, listingData) {
+
+            let html = `<div class="popup_infobox"><span class="title"><a href="https://bungalow.com/listings/bay-area/${slug}" target="_blank">${listingData.title}</a></span>`;
+            html += "<span class='heading'>Residents</span>";
+
+            for (const currentResident of listingData.currentResidents) {
+                html += `<span class='resident'><span class="name">${currentResident.name}</span> ${currentResident.room} (${currentResident.move_in} – present)</span>`;
+            }
+
+            for (const departingResident of listingData.departingResidents) {
+                html += `<span class='resident leaving'><span class="name">${departingResident.name}</span> ${departingResident.room} (leaving soon)</span>`;
+            }
+
+            for (const futureResident of listingData.futureResidents) {
+                html += `<span class='resident arriving'><span class="name">${futureResident.name}</span> (arriving ${futureResident.move_in})</span>`;
+            }
+
+            if (listingData.tour && listingData.tour.length > 0) {
+                html += `<span class="heading">Virtual Tour</span><span class="tour"><a href="${listingData.tour}" target="_blank">${listingData.tour}</a></span>`;
+            }
+
+            html += "</div>";
+            return html;
+        }
+
+        function layoutBungalows(map) {
+            for (const [market, listings] of Object.entries(BUNGALOW_DATA)) {
+                for (const [currentListing, listingData] of Object.entries(listings)) {
+                    if (!listingData || listingData === 'slug') {
+                        continue;
+                    }
+                    const currentAddress = listingData.address;
+                    if (!currentAddress) {
+                        continue;
+                    }
+                    const latitude = currentAddress.latitude;
+                    const longitude = currentAddress.longitude;
+
+                    const north = latitude + 0.0005;
+                    const south = latitude - 0.0005;
+                    const east = longitude + 0.0005;
+                    const west = longitude - 0.0005;
+
+                    new google.maps.Rectangle({
+                        strokeColor: '#FF0000',
+                        strokeOpacity: 0.8,
+                        strokeWeight: 2,
+                        fillColor: '#FF0000',
+                        fillOpacity: 0.35,
+                        map,
+                        bounds: {
+                            north,
+                            south,
+                            east,
+                            west
+                        }
+                    });
+
+
+                    const house = {lat: latitude, lng: longitude};
+
+                    const contentString = formatPopup(currentListing, listingData);
+
+                    const infowindow = new google.maps.InfoWindow({
+                        content: contentString
+                    });
+
+                    const marker = new google.maps.Marker({
+                        position: house,
+                        map: map,
+                        title: currentListing
+                    });
+                    marker.addListener('click', function () {
+                        infowindow.open(map, marker);
+                    });
+                }
+            }
+        }
+
+    </script>
+</head>
+<body onload="">
+<div id="map"></div>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgF_3ar-C7tR078ORYx3R6ha0ZgFhONFs&callback=initMap">
+</script>
+</body>
+</html>
