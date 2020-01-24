@@ -18,6 +18,7 @@
         }
 
         div.popup_infobox {
+            padding: 10px;
             color: #555555;
         }
 
@@ -93,6 +94,8 @@
             return html;
         }
 
+        let openWindow = null;
+
         function layoutBungalows(map) {
             for (const [market, listings] of Object.entries(BUNGALOW_DATA)) {
                 for (const [currentListing, listingData] of Object.entries(listings)) {
@@ -141,6 +144,12 @@
                         title: currentListing
                     });
                     marker.addListener('click', function () {
+
+                        if (openWindow) {
+                            openWindow.close();
+                        }
+
+                        openWindow = infowindow;
                         infowindow.open(map, marker);
                     });
                 }

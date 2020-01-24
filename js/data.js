@@ -1983,7 +1983,7 @@ BUNGALOW_DATA = {
                     "move_in": "2019-11-01"
                 },
                 {
-                    "name": "Arik S.",
+                    "name": "Aaron S.",
                     "room": "Master - 3",
                     "room_id": 3435,
                     "room_size": 159,
