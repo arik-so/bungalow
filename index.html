@@ -109,10 +109,11 @@
                     const latitude = currentAddress.latitude;
                     const longitude = currentAddress.longitude;
 
-                    const north = latitude + 0.0005;
-                    const south = latitude - 0.0005;
-                    const east = longitude + 0.0005;
-                    const west = longitude - 0.0005;
+                    const delta = 0.0005;
+                    const north = latitude + delta;
+                    const south = latitude - delta;
+                    const east = longitude + delta;
+                    const west = longitude - delta;
 
                     new google.maps.Rectangle({
                         strokeColor: '#FF0000',
