@@ -96,6 +96,8 @@
         }
 
         let openWindow = null;
+        const existingCoordinates = {};
+        let maxRepetition = 0;
 
         function layoutBungalows(map) {
             for (const [market, listings] of Object.entries(BUNGALOW_DATA)) {
@@ -110,29 +112,50 @@
                     const latitude = currentAddress.latitude;
                     const longitude = currentAddress.longitude;
 
+                    // const roundedLatitude = Math.round(latitude * 100) / 100;
+                    // const roundedLongitude = Math.round(longitude * 100) / 100;
+                    const roundedLatitude = latitude;
+                    const roundedLongitude = longitude;
+                    const locationString = `${roundedLatitude}|${roundedLongitude}`;
+
+                    let markerLatitude = roundedLatitude;
+                    let markerLongitude = roundedLongitude;
+
+                    // const delta = 0.005;
                     const delta = 0.0005;
-                    const north = latitude + delta;
-                    const south = latitude - delta;
-                    const east = longitude + delta;
-                    const west = longitude - delta;
 
-                    new google.maps.Rectangle({
-                        strokeColor: '#FF0000',
-                        strokeOpacity: 0.8,
-                        strokeWeight: 2,
-                        fillColor: '#FF0000',
-                        fillOpacity: 0.35,
-                        map,
-                        bounds: {
-                            north,
-                            south,
-                            east,
-                            west
-                        }
-                    });
+                    if (!existingCoordinates[locationString]) {
+                        existingCoordinates[locationString] = 0;
 
+                        const north = roundedLatitude + delta;
+                        const south = roundedLatitude - delta;
+                        const east = roundedLongitude + delta;
+                        const west = roundedLongitude - delta;
 
-                    const house = {lat: latitude, lng: longitude};
+                        new google.maps.Rectangle({
+                            strokeColor: '#FF0000',
+                            strokeOpacity: 0.8,
+                            strokeWeight: 2,
+                            fillColor: '#FF0000',
+                            fillOpacity: 0.35,
+                            map,
+                            bounds: {
+                                north,
+                                south,
+                                east,
+                                west
+                            }
+                        });
+                    } else {
+                        const markerOffsetDelta = delta / 10;
+                        const repetition = existingCoordinates[locationString];
+                        markerLatitude -= repetition * markerOffsetDelta;
+                        markerLongitude += repetition * markerOffsetDelta;
+                        console.log(`Repeat location (${repetition + 1}):`, locationString, currentListing);
+                        maxRepetition = Math.max(repetition + 1, maxRepetition);
+                    }
+
+                    const house = {lat: markerLatitude, lng: markerLongitude};
 
                     const contentString = formatPopup(currentListing, listingData);
 
@@ -154,8 +177,11 @@
                         openWindow = infowindow;
                         infowindow.open(map, marker);
                     });
+
+                    existingCoordinates[locationString]++;
                 }
             }
+            console.log('Max repetition:', maxRepetition);
         }
 
     </script>
