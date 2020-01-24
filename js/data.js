@@ -54,7 +54,9 @@ BUNGALOW_DATA = {
             "gorgeous-belmont-home-with-beautiful",
             "palo-alto-home-in-great-neighborhood",
             "a-tranquil-beautiful-home-with-backyard",
-            "charming-dual-level-townhome-just-10"
+            "charming-dual-level-townhome-just-10",
+            "sophisticated-lone-mountain-home-with",
+            "ranch-style-hillsdale-home-caltrain-is"
         ],
         "prime-palo-alto-home-just-off-el-camino": {
             "title": "Charming Palo Alto home with sunny backyard",
@@ -2013,6 +2015,91 @@ BUNGALOW_DATA = {
                 "longitude": -122.457
             },
             "tour": "https://my.matterport.com/show/?m=QE5ubdsWYcK"
+        },
+        "sophisticated-lone-mountain-home-with": {
+            "title": "Sophisticated Laurel Heights home with yard",
+            "currentResidents": [
+                {
+                    "name": "Alex P.",
+                    "room": "Bedroom 2",
+                    "room_id": 3658,
+                    "room_size": 125,
+                    "move_in": "2019-12-07"
+                },
+                {
+                    "name": "Dylan R.",
+                    "room": "Bedroom 3",
+                    "room_id": 3659,
+                    "room_size": 125,
+                    "move_in": "2020-01-19"
+                },
+                {
+                    "name": "Rebecca P.",
+                    "room": "Bedroom 4",
+                    "room_id": 3660,
+                    "room_size": 125,
+                    "move_in": "2019-12-13"
+                }
+            ],
+            "futureResidents": [],
+            "departingResidents": [
+                {
+                    "name": "Nicholas D.",
+                    "room": "Master - 1",
+                    "room_id": 3657,
+                    "room_size": 175,
+                    "price": 2110
+                }
+            ],
+            "address": {
+                "city": "San Francisco",
+                "neighborhood": "",
+                "latitude": 37.782,
+                "longitude": -122.449
+            },
+            "tour": "https://my.matterport.com/show/?m=yAsKvKW2Lud"
+        },
+        "ranch-style-hillsdale-home-caltrain-is": {
+            "title": "Ranch-style Hillsdale home by the Caltrain",
+            "currentResidents": [
+                {
+                    "name": "Christina P.",
+                    "room": "Master - 1",
+                    "room_id": 1632,
+                    "room_size": 239,
+                    "move_in": "2019-11-01"
+                },
+                {
+                    "name": "Aireal S.",
+                    "room": "Bedroom 2",
+                    "room_id": 1633,
+                    "room_size": 126,
+                    "move_in": "2019-04-01"
+                },
+                {
+                    "name": "Jay I.",
+                    "room": "Bedroom 3",
+                    "room_id": 1631,
+                    "room_size": 144,
+                    "move_in": "2019-03-25"
+                },
+                {
+                    "name": "Jonah G.",
+                    "room": "Bedroom 4",
+                    "room_id": 1634,
+                    "room_size": 234,
+                    "move_in": "2020-01-03"
+                }
+            ],
+            "futureResidents": [],
+            "departingResidents": [],
+            "address": {
+                "city": "San Mateo",
+                "neighborhood": "",
+                "latitude": 37.536,
+                "longitude": -122.302
+            },
+            "tour": "https://my.matterport.com/show/?m=4vjv92etL9d"
         }
     },
     "boston": {
@@ -2050,7 +2137,13 @@ BUNGALOW_DATA = {
             "premier-cambridge-home-by-harvard",
             "available-81-wonderful-strawberry-hill",
             "lovely-egleston-square-home-near-stony",
-            "gorgeous-jamaica-plain-apartment"
+            "gorgeous-jamaica-plain-apartment",
+            "charming-upgraded-home-with-a-prime",
+            "private-bedroom-in-updated-dorchester",
+            "recently-renovated-apartment-right-in",
+            "lovely-brookline-apartment-near",
+            "classic-spring-hill-townhome-near",
+            "wonderful-allston-home-with-charming"
         ],
         "inviting-cambridge-home-by-inman-square": {
             "title": "Inviting Cambridge townhome by Inman Square",
@@ -3275,6 +3368,263 @@ BUNGALOW_DATA = {
                 "longitude": -71.103
             },
             "tour": "https://my.matterport.com/show/?m=HW5k4zUytyQ"
+        },
+        "charming-upgraded-home-with-a-prime": {
+            "title": "Sleek Egleston Square home by the T",
+            "currentResidents": [
+                {
+                    "name": "Milan P.",
+                    "room": "Bedroom 2",
+                    "room_id": 1428,
+                    "room_size": 121,
+                    "move_in": "2019-08-01"
+                },
+                {
+                    "name": "Janaya W.",
+                    "room": "Bedroom 3",
+                    "room_id": 1429,
+                    "room_size": 156,
+                    "move_in": "2019-12-21"
+                },
+                {
+                    "name": "Sean G.",
+                    "room": "Bedroom 4",
+                    "room_id": 1430,
+                    "room_size": 100,
+                    "move_in": "2020-01-22"
+                }
+            ],
+            "futureResidents": [],
+            "departingResidents": [],
+            "address": {
+                "city": "Boston",
+                "neighborhood": "",
+                "latitude": 42.314,
+                "longitude": -71.1
+            },
+            "tour": "https://my.matterport.com/show/?m=K2u6f9sQfek"
+        },
+        "private-bedroom-in-updated-dorchester": {
+            "title": "Classic Dorchester home with game room",
+            "currentResidents": [
+                {
+                    "name": "Shakale D.",
+                    "room": "Bedroom 2",
+                    "room_id": 2435,
+                    "room_size": 120,
+                    "move_in": "2019-06-01"
+                },
+                {
+                    "name": "Tyler P.",
+                    "room": "Bedroom 3",
+                    "room_id": 2436,
+                    "room_size": 120,
+                    "move_in": "2019-06-01"
+                }
+            ],
+            "futureResidents": [
+                {
+                    "name": "Nataizha",
+                    "move_in": "2020-02-01",
+                    "room": "Bedroom 1",
+                    "room_id": 2434,
+                    "room_size": 140,
+                    "price": 950,
+                    "replacing": "Ofelia R."
+                }
+            ],
+            "departingResidents": [
+                {
+                    "name": "Ofelia R.",
+                    "room": "Bedroom 1",
+                    "room_id": 2434,
+                    "room_size": 140,
+                    "price": 950,
+                    "replaced_by": "Nataizha"
+                }
+            ],
+            "address": {
+                "city": "Boston",
+                "neighborhood": "",
+                "latitude": 42.3,
+                "longitude": -71.063
+            },
+            "tour": ""
+        },
+        "recently-renovated-apartment-right-in": {
+            "title": "Modern Hyde Square townhouse with private back deck",
+            "currentResidents": [
+                {
+                    "name": "Vibhor G.",
+                    "room": "Master - 1",
+                    "room_id": 102,
+                    "room_size": 150,
+                    "move_in": "2018-11-01"
+                },
+                {
+                    "name": "Katherine M.",
+                    "room": "Bedroom 2",
+                    "room_id": 103,
+                    "room_size": 103,
+                    "move_in": "2018-11-01"
+                },
+                {
+                    "name": "Dohyoung K.",
+                    "room": "Bedroom 3",
+                    "room_id": 104,
+                    "room_size": 100,
+                    "move_in": "2019-05-06"
+                },
+                {
+                    "name": "Richard M.",
+                    "room": "Bedroom 4",
+                    "room_id": 105,
+                    "room_size": 112,
+                    "move_in": "2018-10-29"
+                }
+            ],
+            "futureResidents": [],
+            "departingResidents": [],
+            "address": {
+                "city": "Jamaica Plain",
+                "neighborhood": "Boston",
+                "latitude": 42.321,
+                "longitude": -71.11
+            },
+            "tour": "https://my.matterport.com/show/?m=FgeyYMmtzEj"
+        },
+        "lovely-brookline-apartment-near": {
+            "title": "Inviting Washington Square home with balcony",
+            "currentResidents": [
+                {
+                    "name": "Sienna W.",
+                    "room": "Bedroom 1",
+                    "room_id": 2164,
+                    "room_size": 189,
+                    "move_in": "2019-08-31"
+                },
+                {
+                    "name": "Abdullah A.",
+                    "room": "Bedroom 2",
+                    "room_id": 2165,
+                    "room_size": 156,
+                    "move_in": "2019-09-05"
+                },
+                {
+                    "name": "Jason L.",
+                    "room": "Bedroom 3",
+                    "room_id": 2166,
+                    "room_size": 137,
+                    "move_in": "2019-06-01"
+                },
+                {
+                    "name": "Jonathan A.",
+                    "room": "Bedroom 4",
+                    "room_id": 2167,
+                    "room_size": 209,
+                    "move_in": "2019-07-01"
+                }
+            ],
+            "futureResidents": [],
+            "departingResidents": [],
+            "address": {
+                "city": "Brookline",
+                "neighborhood": "",
+                "latitude": 42.343,
+                "longitude": -71.138
+            },
+            "tour": "https://my.matterport.com/show/?m=B5km2m8GkVy&utm_source=4"
+        },
+        "classic-spring-hill-townhome-near": {
+            "title": "Classic Spring Hill townhome near Mystic River",
+            "currentResidents": [
+                {
+                    "name": "Carolyn S.",
+                    "room": "Bedroom 1",
+                    "room_id": 2923,
+                    "room_size": 190,
+                    "move_in": "2019-08-23"
+                },
+                {
+                    "name": "Andrew J.",
+                    "room": "Bedroom 2",
+                    "room_id": 2924,
+                    "room_size": 173,
+                    "move_in": "2019-08-11"
+                },
+                {
+                    "name": "Yiwei Y.",
+                    "room": "Bedroom 3",
+                    "room_id": 2925,
+                    "room_size": 137,
+                    "move_in": "2019-08-17"
+                },
+                {
+                    "name": "Jorge C.",
+                    "room": "Bedroom 4",
+                    "room_id": 2926,
+                    "room_size": 251,
+                    "move_in": "2019-08-01"
+                }
+            ],
+            "futureResidents": [],
+            "departingResidents": [],
+            "address": {
+                "city": "Somerville",
+                "neighborhood": "",
+                "latitude": 42.384,
+                "longitude": -71.1
+            },
+            "tour": "https://my.matterport.com/show/?m=PWRdjwYPDSP"
+        },
+        "wonderful-allston-home-with-charming": {
+            "title": "Wonderful Allston home with charming backyard",
+            "currentResidents": [
+                {
+                    "name": "Akhil K.",
+                    "room": "Bedroom 1",
+                    "room_id": 3158,
+                    "room_size": 140,
+                    "move_in": "2019-09-14"
+                },
+                {
+                    "name": "Hazel B.",
+                    "room": "Bedroom 2",
+                    "room_id": 3156,
+                    "room_size": 124,
+                    "move_in": "2019-09-23"
+                },
+                {
+                    "name": "Vugar J.",
+                    "room": "Bedroom 3",
+                    "room_id": 3159,
+                    "room_size": 144,
+                    "move_in": "2019-09-05"
+                },
+                {
+                    "name": "Fahim F.",
+                    "room": "Bedroom 4",
+                    "room_id": 3160,
+                    "room_size": 151,
+                    "move_in": "2019-10-24"
+                },
+                {
+                    "name": "Martin D.",
+                    "room": "Bedroom 5",
+                    "room_id": 3161,
+                    "room_size": 174,
+                    "move_in": "2019-12-08"
+                }
+            ],
+            "futureResidents": [],
+            "departingResidents": [],
+            "address": {
+                "city": "Allston",
+                "neighborhood": "",
+                "latitude": 42.359,
+                "longitude": -71.128
+            },
+            "tour": "https://my.matterport.com/show/?m=j7sdMdpoyyP"
         }
     },
     "chicago": {
@@ -6467,7 +6817,13 @@ BUNGALOW_DATA = {
             "lively-harlem-duplex-near-subway",
             "available-41-amazing-williamsburg-4",
             "modern-bed-stuy-duplex",
-            "charming-williamsburg-apartment-5"
+            "charming-williamsburg-apartment-5",
+            "upbeat-clinton-hill-duplex-with-great",
+            "winter-promotion-gorgeous-recently",
+            "alluring-williamsburg-home-every-room",
+            "stunning-upper-west-side-home",
+            "spacious-bed-stuy-brownstone",
+            "impeccable-williamsburg-apartment-by"
         ],
         "lovely-williamsburg-flat": {
             "title": "Stylish Williamsburg flat near the G Line",
@@ -7691,6 +8047,325 @@ BUNGALOW_DATA = {
                 "longitude": -73.942
             },
             "tour": "https://my.matterport.com/show/?m=LouS9aXRtq8"
+        },
+        "upbeat-clinton-hill-duplex-with-great": {
+            "title": "Lovely Clinton Hill home with fitness center",
+            "currentResidents": [
+                {
+                    "name": "Colin D.",
+                    "room": "Bedroom 1",
+                    "room_id": 2696,
+                    "room_size": 86,
+                    "move_in": "2019-08-05"
+                },
+                {
+                    "name": "Hannah W.",
+                    "room": "Bedroom 3",
+                    "room_id": 2698,
+                    "room_size": 74,
+                    "move_in": "2019-07-17"
+                },
+                {
+                    "name": "Zainab M.",
+                    "room": "Bedroom 4",
+                    "room_id": 2699,
+                    "room_size": 85,
+                    "move_in": "2019-08-13"
+                },
+                {
+                    "name": "James B.",
+                    "room": "Bedroom 5",
+                    "room_id": 2700,
+                    "room_size": 86,
+                    "move_in": "2019-07-27"
+                },
+                {
+                    "name": "Reval P.",
+                    "room": "Bedroom 6",
+                    "room_id": 2701,
+                    "room_size": 103,
+                    "move_in": "2019-07-26"
+                }
+            ],
+            "futureResidents": [
+                {
+                    "name": "Soren Aabye",
+                    "move_in": "2019-11-09"
+                }
+            ],
+            "departingResidents": [],
+            "address": {
+                "city": "Brooklyn",
+                "neighborhood": "",
+                "latitude": 40.694,
+                "longitude": -73.961
+            },
+            "tour": "https://my.matterport.com/show/?m=aLSyWAsZ7eZ"
+        },
+        "winter-promotion-gorgeous-recently": {
+            "title": "Gorgeous Ridgewood apartment near Highland Park",
+            "currentResidents": [
+                {
+                    "name": "Josiah T.",
+                    "room": "Bedroom 1",
+                    "room_id": 1163,
+                    "room_size": 76,
+                    "move_in": "2019-08-01"
+                },
+                {
+                    "name": "Asia P.",
+                    "room": "Bedroom 3",
+                    "room_id": 1165,
+                    "room_size": 72,
+                    "move_in": "2019-02-23"
+                },
+                {
+                    "name": "Vivian T.",
+                    "room": "Bedroom 4",
+                    "room_id": 1166,
+                    "room_size": 91,
+                    "move_in": "2019-01-20"
+                },
+                {
+                    "name": "Keyera F.",
+                    "room": "Bedroom 5",
+                    "room_id": 1167,
+                    "room_size": 118,
+                    "move_in": "2019-08-01"
+                }
+            ],
+            "futureResidents": [],
+            "departingResidents": [
+                {
+                    "name": "Myron L.",
+                    "room": "Bedroom 2",
+                    "room_id": 1164,
+                    "room_size": 119,
+                    "price": 1030
+                }
+            ],
+            "address": {
+                "city": "Ridgewood",
+                "neighborhood": "NYC",
+                "latitude": 40.702,
+                "longitude": -73.911
+            },
+            "tour": "https://my.matterport.com/show/?m=wXN7if7Jbpz"
+        },
+        "alluring-williamsburg-home-every-room": {
+            "title": "Alluring East Williamsburg home with in-complex gym",
+            "currentResidents": [
+                {
+                    "name": "Aliyah B.",
+                    "room": "Master - 1",
+                    "room_id": 2598,
+                    "room_size": 93,
+                    "move_in": "2019-08-12"
+                },
+                {
+                    "name": "Jordan D.",
+                    "room": "Master - 2",
+                    "room_id": 2599,
+                    "room_size": 75,
+                    "move_in": "2019-09-01"
+                },
+                {
+                    "name": "George H.",
+                    "room": "Master - 4",
+                    "room_id": 2601,
+                    "room_size": 83,
+                    "move_in": "2019-08-14"
+                }
+            ],
+            "futureResidents": [],
+            "departingResidents": [
+                {
+                    "name": "Robert D.",
+                    "room": "Master - 3",
+                    "room_id": 2600,
+                    "room_size": 126,
+                    "price": 1495
+                }
+            ],
+            "address": {
+                "city": "Brooklyn",
+                "neighborhood": "",
+                "latitude": 40.706,
+                "longitude": -73.938
+            },
+            "tour": "https://my.matterport.com/show/?m=NXs1F9v3ob7"
+        },
+        "stunning-upper-west-side-home": {
+            "title": "Modern Manhattan home by the B and C lines",
+            "currentResidents": [
+                {
+                    "name": "Jorge R.",
+                    "room": "Bedroom 1",
+                    "room_id": 1559,
+                    "room_size": 73,
+                    "move_in": "2019-08-22"
+                },
+                {
+                    "name": "Daniel W.",
+                    "room": "Bedroom 2",
+                    "room_id": 1560,
+                    "room_size": 74,
+                    "move_in": "2019-09-01"
+                },
+                {
+                    "name": "Justin D.",
+                    "room": "Bedroom 3",
+                    "room_id": 1563,
+                    "room_size": 100,
+                    "move_in": "2019-09-01"
+                },
+                {
+                    "name": "Stephen M.",
+                    "room": "Bedroom 5",
+                    "room_id": 1561,
+                    "room_size": 108,
+                    "move_in": "2019-08-15"
+                }
+            ],
+            "futureResidents": [],
+            "departingResidents": [
+                {
+                    "name": "Shimon S.",
+                    "room": "Bedroom 4",
+                    "room_id": 1562,
+                    "room_size": 80,
+                    "price": 1400
+                }
+            ],
+            "address": {
+                "city": "New York",
+                "neighborhood": "",
+                "latitude": 40.8,
+                "longitude": -73.96
+            },
+            "tour": "https://my.matterport.com/show/?m=PWachxUXwUb"
+        },
+        "spacious-bed-stuy-brownstone": {
+            "title": "Traditional Bed-Stuy brownstone with charming views",
+            "currentResidents": [
+                {
+                    "name": "Abayomi B.",
+                    "room": "Bedroom 2",
+                    "room_id": 1678,
+                    "room_size": 167,
+                    "move_in": "2019-10-31"
+                },
+                {
+                    "name": "Kar R.",
+                    "room": "Bedroom 3",
+                    "room_id": 1679,
+                    "room_size": 60,
+                    "move_in": "2019-05-04"
+                },
+                {
+                    "name": "Andrew V.",
+                    "room": "Bedroom 4",
+                    "room_id": 1680,
+                    "room_size": 180,
+                    "move_in": "2019-04-13"
+                },
+                {
+                    "name": "William F.",
+                    "room": "Bedroom 5",
+                    "room_id": 1681,
+                    "room_size": 77,
+                    "move_in": "2019-05-17"
+                },
+                {
+                    "name": "Olivia N.",
+                    "room": "Bedroom 6",
+                    "room_id": 1682,
+                    "room_size": 191,
+                    "move_in": "2019-05-01"
+                },
+                {
+                    "name": "Kyle C.",
+                    "room": "Bedroom 8",
+                    "room_id": 1684,
+                    "room_size": 73,
+                    "move_in": "2019-04-16"
+                }
+            ],
+            "futureResidents": [
+                {
+                    "name": "Stefany",
+                    "move_in": "2020-02-01"
+                },
+                {
+                    "name": "Reeza Sandy",
+                    "move_in": "2019-05-01"
+                }
+            ],
+            "departingResidents": [
+                {
+                    "name": "Brittany A.",
+                    "room": "Bedroom 1",
+                    "room_id": 1677,
+                    "room_size": 118,
+                    "price": null
+                },
+                {
+                    "name": "Reeza S.",
+                    "room": "Bedroom 7",
+                    "room_id": 1683,
+                    "room_size": 146,
+                    "price": null
+                }
+            ],
+            "address": {
+                "city": "Brooklyn",
+                "neighborhood": "",
+                "latitude": 40.684,
+                "longitude": -73.926
+            },
+            "tour": "https://my.matterport.com/show/?m=5BRiUZQiTEV"
+        },
+        "impeccable-williamsburg-apartment-by": {
+            "title": "Welcoming Williamsburg apartment near the L Line",
+            "currentResidents": [
+                {
+                    "name": "Will M.",
+                    "room": "Bedroom 1",
+                    "room_id": 2537,
+                    "room_size": 108,
+                    "move_in": "2019-07-25"
+                },
+                {
+                    "name": "Alex W.",
+                    "room": "Bedroom 2",
+                    "room_id": 2538,
+                    "room_size": 128,
+                    "move_in": "2019-10-01"
+                },
+                {
+                    "name": "Scott .",
+                    "room": "Bedroom 3",
+                    "room_id": 2539,
+                    "room_size": 127,
+                    "move_in": "2019-07-19"
+                },
+                {
+                    "name": "Katie M.",
+                    "room": "Bedroom 4",
+                    "room_id": 2540,
+                    "room_size": 106,
+                    "move_in": "2019-09-01"
+                }
+            ],
+            "futureResidents": [],
+            "departingResidents": [],
+            "address": {
+                "city": "Brooklyn",
+                "neighborhood": "",
+                "latitude": 40.714,
+                "longitude": -73.962
+            },
+            "tour": "https://my.matterport.com/show/?m=CCghAfPqkAY"
         }
     },
     "philadelphia": {
@@ -8107,7 +8782,8 @@ BUNGALOW_DATA = {
             "remodeled-concordia-charmer",
             "special-seasonal-rates-stylish-pet",
             "vibrant-eliot-apartment-with-great-view",
-            "special-seasonal-rates-newly"
+            "special-seasonal-rates-newly",
+            "beautiful-humboldt-home-off-alberta"
         ],
         "beautiful-king-home-with-backyard": {
             "title": "Beautiful King home with backyard lounge",
@@ -9611,7 +10287,8 @@ BUNGALOW_DATA = {
                 "longitude": -122.683
             },
             "tour": "https://my.matterport.com/show/?m=Mh3vDg1ApgL&utm_source=4"
-        }
+        },
+        "beautiful-humboldt-home-off-alberta": null
     },
     "san-diego": {
         "slugs": [

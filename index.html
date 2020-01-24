@@ -102,7 +102,7 @@
         function layoutBungalows(map) {
             for (const [market, listings] of Object.entries(BUNGALOW_DATA)) {
                 for (const [currentListing, listingData] of Object.entries(listings)) {
-                    if (!listingData || listingData === 'slug') {
+                    if (!listingData || currentListing === 'slug') {
                         continue;
                     }
                     const currentAddress = listingData.address;
