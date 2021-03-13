@@ -78,7 +78,7 @@
 
         function formatPopup(slug, listingData) {
 
-            let html = `<div class="popup_infobox"><span class="title"><a href="https://bungalow.com/listings/bay-area/${slug}" target="_blank">${listingData.title}</a></span>`;
+            let html = `<div class="popup_infobox"><span class="title"><a href="${listingData.url}" target="_blank">${listingData.title}</a></span>`;
             html += "<span class='heading'>Residents</span>";
 
             for (const currentResident of listingData.residentDetails) {
