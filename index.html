@@ -33,12 +33,11 @@
         }
 
         span.heading {
-            margin-top: 6px;
-            margin-bottom: 1px;
+            margin-top: 15px;
+            margin-bottom: 10px;
             font-weight: bold;
             display: block;
             text-transform: uppercase;
-            padding-top: 6px;
         }
 
         span.resident {
@@ -48,17 +47,24 @@
 
         span.resident > span.name {
             font-weight: bold;
-            padding-right: 10px;
+            padding-right: 5px;
+        }
+
+        span.resident > div.time_range {
+            padding-top: 5px;
+            padding-bottom: 10px;
         }
 
         span.resident.leaving > span.name, span.resident.arriving > span.name {
             color: #777777;
         }
     </style>
-    <script src="./js/data.js"></script>
+    <script src="./js/resident-data.js"></script>
     <script>
 
         // This example adds a red rectangle to a map.
+
+        let infoWindow = null;
 
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -75,21 +81,41 @@
             let html = `<div class="popup_infobox"><span class="title"><a href="https://bungalow.com/listings/bay-area/${slug}" target="_blank">${listingData.title}</a></span>`;
             html += "<span class='heading'>Residents</span>";
 
-            for (const currentResident of listingData.currentResidents) {
-                html += `<span class='resident'><span class="name">${currentResident.name}</span> ${currentResident.room} (${currentResident.move_in} – present)</span>`;
+            for (const currentResident of listingData.residentDetails) {
+                const residentName = currentResident.first_name;
+                let timeRangeText = '';
+                let roomText = ''
+                if (currentResident.missingMoveInDate) {
+                    timeRangeText = `Leaving ${currentResident.availability_date}`;
+                } else if (currentResident.missingRoomDetails) {
+                    timeRangeText = `Move-in: ${currentResident.move_in_date}`
+                } else {
+                    // we have everything
+                    timeRangeText = `${currentResident.move_in_date} — ${currentResident.availability_date}`;
+                }
+
+                if (!currentResident.missingRoomDetails) {
+                    roomText = `<a href="${currentResident.matterport_url}" target="_blank">${currentResident.name}</a>`
+                }
+                html += `<span class="resident"><span class="name">${residentName}${!!roomText ? ':' : ''}</span>${roomText}<div class="time_range">${timeRangeText}</div></span>`
+
             }
 
-            for (const departingResident of listingData.departingResidents) {
-                html += `<span class='resident leaving'><span class="name">${departingResident.name}</span> ${departingResident.room} (leaving soon)</span>`;
-            }
-
-            for (const futureResident of listingData.futureResidents) {
-                html += `<span class='resident arriving'><span class="name">${futureResident.name}</span> (arriving ${futureResident.move_in})</span>`;
-            }
-
-            if (listingData.tour && listingData.tour.length > 0) {
-                html += `<span class="heading">Virtual Tour</span><span class="tour"><a href="${listingData.tour}" target="_blank">${listingData.tour}</a></span>`;
-            }
+            // for (const currentResident of listingData.currentResidents) {
+            //     html += `<span class='resident'><span class="name">${currentResident.name}</span> ${currentResident.room} (${currentResident.move_in} – present)</span>`;
+            // }
+            //
+            // for (const departingResident of listingData.departingResidents) {
+            //     html += `<span class='resident leaving'><span class="name">${departingResident.name}</span> ${departingResident.room} (leaving soon)</span>`;
+            // }
+            //
+            // for (const futureResident of listingData.futureResidents) {
+            //     html += `<span class='resident arriving'><span class="name">${futureResident.name}</span> (arriving ${futureResident.move_in})</span>`;
+            // }
+            //
+            // if (listingData.tour && listingData.tour.length > 0) {
+            //     html += `<span class="heading">Virtual Tour</span><span class="tour"><a href="${listingData.tour}" target="_blank">${listingData.tour}</a></span>`;
+            // }
 
             html += "</div>";
             return html;
@@ -100,17 +126,23 @@
         let maxRepetition = 0;
 
         function layoutBungalows(map) {
-            for (const [market, listings] of Object.entries(BUNGALOW_DATA)) {
+            for (const [market, listings] of Object.entries(RESIDENT_DATA)) {
                 for (const [currentListing, listingData] of Object.entries(listings)) {
                     if (!listingData || currentListing === 'slug') {
                         continue;
                     }
-                    const currentAddress = listingData.address;
-                    if (!currentAddress) {
+                    const currentCoordinates = listingData.coordinates;
+                    if (!currentCoordinates) {
                         continue;
                     }
-                    const latitude = currentAddress.latitude;
-                    const longitude = currentAddress.longitude;
+
+                    const residentDetails = listingData.residentDetails;
+                    if (!Array.isArray(residentDetails) || residentDetails.length < 1) {
+                        continue;
+                    }
+
+                    const latitude = currentCoordinates.latitude;
+                    const longitude = currentCoordinates.longitude;
 
                     // const roundedLatitude = Math.round(latitude * 100) / 100;
                     // const roundedLongitude = Math.round(longitude * 100) / 100;
@@ -159,7 +191,10 @@
 
                     const contentString = formatPopup(currentListing, listingData);
 
-                    const infowindow = new google.maps.InfoWindow({
+                    // if (infoWindow) {
+                    //     infoWindow.close();
+                    // }
+                    const infoWindow = new google.maps.InfoWindow({
                         content: contentString
                     });
 
@@ -174,8 +209,8 @@
                             openWindow.close();
                         }
 
-                        openWindow = infowindow;
-                        infowindow.open(map, marker);
+                        openWindow = infoWindow;
+                        infoWindow.open(map, marker);
                     });
 
                     existingCoordinates[locationString]++;
